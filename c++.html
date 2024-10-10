@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Código e conceitos</title>
+</head>
+<body>
+    <nav>
+        <a href="./index.html">Linguagens</a>
+        <a href="./tikercad.html">TinkerCad</a>
+        <a href="./c++.html">C++</a>
+        <a href="./java.html">Java</a>
+    </nav>
+    <br>
+    <h1>Linguagem C++ </h1>
+    <br>
+    <p>É usada por desenvolvedores, para escrever programas complexos, lidar com alocação de memória, gerenciar recursos de forma explícita e criar programas de alto desempenho. Ela oferece recursos avançados, como herança, polimorfismo, sobrecarga de operadores e manipulação direta de memória e é usada por setores automotivos, aeronáuticos, navais, petrolíficos.</p>
+    <br>
+    <div>
+        <img src="./img01c++.png" alt="Código C++">
+        <br>
+        <small> Fonte: Autor </small>
+        <br>
+    </div>
+    <br>
+    <h2> Texto C++</h2>
+    <br>
+    <p>// C++ code
+        //
+        int pot1 = 0;
+        int pot2 = 0;
+        int res = 0;
+        
+        void setup()
+        {
+          pinMode(A1, INPUT);
+          Serial.begin(9600);
+          pinMode(A0, INPUT);
+          pinMode(12, OUTPUT);
+          pot1 = 0;
+          pot2 = 0;
+          res = 0;
+          digitalWrite(12, LOW);
+        }
+        void loop()
+        {
+          pot1 += analogRead(A1);
+          Serial.println("pot1 ---------------------");
+          Serial.println(pot1);
+          pot2 += analogRead(A0);
+          Serial.println("pot2----------------------");
+          Serial.println(pot2);
+          if (pot1 > pot2) {
+            res += (pot1 + pot2);
+            Serial.println("res ----------------");
+            Serial.println(res);
+            digitalWrite(12, HIGH);
+          } else {
+            digitalWrite(12, HIGH);
+          }
+          delay(1); // Wait for 1 millisecond(s)
+        }
+        </p>
+</body>
+</html>
